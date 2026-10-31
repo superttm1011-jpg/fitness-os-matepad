@@ -41,3 +41,4 @@
 ## 不可宣称已完成的步骤
 
 生成本发布包不代表 GitHub 仓库、GitHub Pages 网址或华为平板实机安装已完成；需用户建立独立仓库并启用Pages。
+Fitness OS V4.2 - GitHub Pages deployment check
