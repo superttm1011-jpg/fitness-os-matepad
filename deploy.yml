@@ -1,0 +1,38 @@
+name: Publish Fitness OS to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  verify-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Python privacy and app shell checks
+        run: python3 tests/verify_release.py
+      - name: Collect publishable static files only
+        run: |
+          mkdir -p _site/icons _site/assets
+          cp index.html sw.js manifest.webmanifest robots.txt .nojekyll _site/
+          cp icons/*.png _site/icons/
+          cp assets/*.webp _site/assets/
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
