@@ -1,7 +1,7 @@
 {
-  "name": "Fitness OS V4.2 双人健康训练",
+  "name": "Fitness OS V4.3 双人健康训练",
   "short_name": "Fitness OS",
-  "description": "华为MatePad离线训练与营养记录，双人独立档案",
+  "description": "华为 MatePad 双人独立记录：训练负重进阶、减量模式、营养与健康趋势",
   "id": "./",
   "start_url": "./index.html",
   "scope": "./",

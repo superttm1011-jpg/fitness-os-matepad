@@ -1,9 +1,9 @@
-// Fitness OS v4.2 — GitHub Pages sub-path safe, offline-capable static shell.
+// Fitness OS v4.3 — GitHub Pages sub-path safe, offline-capable static shell.
 // No user data, health metrics, or form submissions are cached by the service worker.
-const CACHE='fitnessos-duo-shell-v4.2-20261031';
+const CACHE='fitnessos-duo-shell-v4.3-20261102';
 const PREFIX='fitnessos-duo-shell-';
 const APP_SHELL=new URL('./index.html',self.registration.scope).href;
-const STATIC_FILES=['./','./index.html','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png','./assets/overview.webp','./assets/push.webp','./assets/pull.webp','./assets/legs.webp','./assets/food.webp'];
+const STATIC_FILES=['./','./index.html','./manifest.webmanifest','./assets/fitness-engine-v4.3.js','./icons/icon-192.png','./icons/icon-512.png','./assets/overview.webp','./assets/push.webp','./assets/pull.webp','./assets/legs.webp','./assets/food.webp'];
 self.addEventListener('install',event=>event.waitUntil((async()=>{
   const cache=await caches.open(CACHE);
   await cache.addAll(STATIC_FILES);
