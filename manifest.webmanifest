@@ -1,7 +1,7 @@
 {
-  "name": "Fitness OS V4.7 双人健康训练 · RepDB 教学版",
+  "name": "Fitness OS V5.0 双人健身与健康管理 · 长期稳定版",
   "short_name": "Fitness OS",
-  "description": "华为 MatePad 双人独立记录：训练负重进阶、减量模式、营养与健康趋势",
+  "description": "华为 MatePad 双人离线健身：三分化、全身训练、动作教学、进阶与恢复、饮食营养、体检趋势、加密备份",
   "id": "./",
   "start_url": "./index.html",
   "scope": "./",
