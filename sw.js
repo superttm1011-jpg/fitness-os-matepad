@@ -1,5 +1,5 @@
 // Fitness OS V5.0 — same existing IndexedDB storage key. RepDB free WebP only; no user data cached here.
-const CACHE='fitnessos-duo-shell-v5.0-final-20261103';
+const CACHE='fitnessos-duo-shell-v5.0-accessory-final-20261104';
 const PREFIX='fitnessos-duo-shell-';
 const MEDIA_CACHE='fitnessos-repdb-visuals-v5.0';
 const APP_SHELL=new URL('./index.html',self.registration.scope).href;
